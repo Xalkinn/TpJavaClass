@@ -19,5 +19,14 @@ public class Main {
 		
 		Object o = new Point (6, 2); //Comparaison avec les point de la ligne 6
 		System.out.println(p1.equals(o));
+		
+		Figure f = new Rond(new Point(), 6);
+		f.affiche();	
+		/* En gros f.affiche() va dire ok j'existe je vais dans "new Rond" juste au dessus
+		 * Je suis dans rond je ne vois pas de affiche(), je vais donc dans Figure.java
+		 * Une fois dans Figure.java je vois que affiche() existe je fais donc le toString
+		 * Je reviens dans Rond, le toString est présent
+		 * Je peux donc utiliser la fonction affiche() sans problème
+		 */
 	}
 }

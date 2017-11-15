@@ -1,6 +1,6 @@
 package TpJavaClass;
 
-public class Rond {
+public class Rond extends Figure {
 	private Point centre;
 	private int r; // rayon
 
@@ -15,10 +15,5 @@ public class Rond {
 
 	public String toString() {
 		return ""+getType() + " : Point " + centre + " | Rayon " + r + "";
-	}
-
-	public String affiche() {
-		System.out.println(this.toString());
-		return null;
 	}
 }

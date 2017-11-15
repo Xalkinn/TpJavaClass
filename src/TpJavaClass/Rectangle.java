@@ -1,6 +1,6 @@
 package TpJavaClass;
 
-public class Rectangle {
+public class Rectangle extends Figure {
 	private Point basGauche;
 	private Point basDroit;
 	private Point hautGauche;
@@ -36,9 +36,5 @@ public class Rectangle {
 	public String toString() {
 		return ""+getType()+" : Point bas droit "+getPointBasDroit()+" Point bas gauche "+getPointBasGauche()+" Point haut droit "+getPointHautDroit()+" Point haut gauche "+getPointHautGauche()+"";
 	}
-	
-	public String affiche() {
-		System.out.println(this.toString());
-		return null;
-	}
+
 }
