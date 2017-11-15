@@ -8,4 +8,6 @@ public abstract class Figure {
 		System.out.println(this.toString());
 		return null;
 	}
+	
+	public abstract Point [] getPoint();
 }

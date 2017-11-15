@@ -16,4 +16,9 @@ public class Rond extends Figure {
 	public String toString() {
 		return ""+getType() + " : Point " + centre + " | Rayon " + r + "";
 	}
+
+	@Override
+	public Point[] getPoint() {
+		return new Point[] {centre};
+	}
 }

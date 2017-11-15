@@ -37,4 +37,8 @@ public class Rectangle extends Figure {
 		return ""+getType()+" : Point bas droit "+getPointBasDroit()+" Point bas gauche "+getPointBasGauche()+" Point haut droit "+getPointHautDroit()+" Point haut gauche "+getPointHautGauche()+"";
 	}
 
+	@Override
+	public Point[] getPoint() {
+		return new Point[] {getPointBasDroit(), getPointBasGauche(), getPointHautDroit(), getPointHautGauche()};
+	}
 }
