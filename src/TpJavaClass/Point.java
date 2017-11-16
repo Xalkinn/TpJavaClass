@@ -25,6 +25,7 @@ public class Point {
 	
 	public String toString() {
 		return "["+getX()+";"+getY()+"]";
+		//Afficher les coordonnees x, y du point
 	}
 	
 	public boolean equals(Object o) { //Equals me sert ici a voir si les point que je rentre sont identique ou non
@@ -32,7 +33,9 @@ public class Point {
 			return false;
 		}
 		Point p = (Point) o;
-		if(this.getX() == p.getX() && this.getY() == p.getY())
+		if(this.getX() == p.getX() && this.getY() == p.getY()) 
+			//condition de vérification entre les coordonnees du point (grace à this on compare les coordonnees du constructeur Point();) 
+			//et le point qui a pour coordonnee 25, 25
 		{
 			return true;
 		}

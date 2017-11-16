@@ -20,6 +20,7 @@ public class Rond extends Figure implements Surfacable {
 	}
 
 	@Override
+	//Affichage du point du cercle dans un tableau (le centre du cercle)
 	public ArrayList<Point> getPoint() {
 		ArrayList<Point> list_point = new ArrayList<>();
 		list_point.add(centre);

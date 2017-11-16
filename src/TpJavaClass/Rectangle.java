@@ -61,8 +61,9 @@ public class Rectangle extends Figure implements Surfacable{
 		list_point.add(getPointHautDroit());
 		list_point.add(getPointHautDroit());
 		return list_point;
-		//return new ArrayList<Point> ();
-		//getPointBasDroit(), getPointBasGauche(), getPointHautDroit(), getPointHautGauche());	
+		/*return new ArrayList<Point> ();
+		 *getPointBasDroit(), getPointBasGauche(), getPointHautDroit(), getPointHautGauche());	
+		*/
 	}
 
 	@Override
