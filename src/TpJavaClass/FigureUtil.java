@@ -1,6 +1,7 @@
 package TpJavaClass;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class FigureUtil {
 
@@ -13,8 +14,9 @@ public class FigureUtil {
 	private static final int Y_MIN = 0;
 	private static final int Y_MAX = 99;
 
-	// Création d'un constructeur private afin d'interdire l'instanciation de cette
-	// classe.
+	/* Création d'un constructeur private afin d'interdire l'instanciation de cette
+	 * classe.
+	 * */
 	private FigureUtil() {
 	}
 
@@ -80,6 +82,7 @@ public class FigureUtil {
 	
 	public static Surfacable getRandomSurfacable() {
 		double alea = Math.random();
+		//Math.random va me créer un chiffre aléatoire entre 0 et 1
 		if (alea < 0.33)
 		{
 			return getRandomCarre();
@@ -89,6 +92,7 @@ public class FigureUtil {
 			return getRandomRectangle();
 		}
 		else return getRandomRond();	
+		//Je renvoi 3 chose donc je divise 1 par 3
 	}
 	
 	public static ArrayList<Figure> genere(int nbfigure){
@@ -101,5 +105,22 @@ public class FigureUtil {
 		}
 		
 		return result;
+	}
+	
+	public static Figure getFigureEn(Point p, Dessin dessin) {
+		Iterator it = dessin.getListe().iterator();
+		//Création d'itérateur pour parcourir le Dessin qui contient Figure
+		Figure figure = null;
+		while (it.hasNext()) {
+			//Permet de passer au suivant
+			figure = (Figure) it.next(); 
+			//Cast obligaroire
+			if(figure.couvre(p)) {
+				//Ici si le point fais parti d'une figure je renvoi figure
+				return figure;
+			}
+		}
+		return null;
+		//Si il n'y a pas de figure on sors de la boucle en sortant un null precedemment initialiser au dessus
 	}
 }

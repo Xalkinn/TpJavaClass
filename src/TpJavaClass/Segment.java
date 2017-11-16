@@ -46,7 +46,15 @@ public class Segment extends Figure {
 
 	@Override
 	public boolean couvre(Point p) {
-		// TODO Auto-generated method stub
+		if (horizontale)
+		// C'est un booléen donc pas besoin de mettre horizontale == true
+		{
+			if (p.getY() == debut.getY() && (p.getX() >= debut.getX() && p.getX() <= fin.getX()))
+				return true;
+		} else {
+			if (p.getX() == debut.getX() && (p.getY() >= debut.getY() && p.getY() <= fin.getY()))
+				return true;
+		}
 		return false;
 	}
 
