@@ -1,18 +1,34 @@
 package TpJavaClass;
 
-public class Rectangle extends Figure {
+import java.util.ArrayList;
+
+public class Rectangle extends Figure implements Surfacable{
 	private Point basGauche;
 	private Point basDroit;
 	private Point hautGauche;
-	private Point hautDroit;	
+	private Point hautDroit;
+	private int hauteur;
+	private int largeur;
 	
 	public Rectangle (Point point, int largeur, int hauteur) {
 		basGauche = new Point(point.getX(), point.getY());
 		basDroit = new Point(point.getX() + largeur, point.getY());
 		hautGauche = new Point(point.getX(), point.getY() + hauteur);
 		hautDroit = new Point(point.getX() + largeur,  point.getY() + hauteur);
+		this.hauteur = hauteur;
+		this.largeur = largeur;
 	}
 	
+	public int getHauteur() {
+		return hauteur;
+	}
+
+
+	public int getLargeur() {
+		return largeur;
+	}
+
+
 	public Point getPointBasGauche() {
 		return basGauche;
 	}
@@ -38,7 +54,20 @@ public class Rectangle extends Figure {
 	}
 
 	@Override
-	public Point[] getPoint() {
-		return new Point[] {getPointBasDroit(), getPointBasGauche(), getPointHautDroit(), getPointHautGauche()};
+	public ArrayList<Point> getPoint() {
+		ArrayList<Point> list_point = new ArrayList<>();
+		list_point.add(getPointBasDroit());
+		list_point.add(getPointBasGauche());
+		list_point.add(getPointHautDroit());
+		list_point.add(getPointHautDroit());
+		return list_point;
+		//return new ArrayList<Point> ();
+		//getPointBasDroit(), getPointBasGauche(), getPointHautDroit(), getPointHautGauche());	
 	}
+
+	@Override
+	public double surface() {
+		return largeur * hauteur;
+	}
+
 }

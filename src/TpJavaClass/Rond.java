@@ -1,6 +1,8 @@
 package TpJavaClass;
 
-public class Rond extends Figure {
+import java.util.ArrayList;
+
+public class Rond extends Figure implements Surfacable {
 	private Point centre;
 	private int r; // rayon
 
@@ -18,7 +20,16 @@ public class Rond extends Figure {
 	}
 
 	@Override
-	public Point[] getPoint() {
-		return new Point[] {centre};
+	public ArrayList<Point> getPoint() {
+		ArrayList<Point> list_point = new ArrayList<>();
+		list_point.add(centre);
+		return list_point;
 	}
+
+	@Override
+	public double surface() {
+		return Math.PI * r * r;
+	}
+
+
 }

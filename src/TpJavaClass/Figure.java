@@ -1,5 +1,7 @@
 package TpJavaClass;
 
+import java.util.ArrayList;
+
 public abstract class Figure {
 	
 	public abstract String getType(); //Ici se trouve la fonction commune au Rond rectangle
@@ -9,5 +11,6 @@ public abstract class Figure {
 		return null;
 	}
 	
-	public abstract Point [] getPoint();
+	public abstract ArrayList<Point> getPoint();
+	//Fonction qui serons dispo pour Carre.java, Rectangle.java, Rond.java et Segment.java
 }
