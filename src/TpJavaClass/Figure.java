@@ -13,4 +13,6 @@ public abstract class Figure {
 	
 	public abstract ArrayList<Point> getPoint();
 	//Fonction qui serons dispo pour Carre.java, Rectangle.java, Rond.java et Segment.java
+	
+	public abstract boolean couvre(Point p);
 }

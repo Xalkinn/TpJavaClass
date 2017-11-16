@@ -32,5 +32,14 @@ public class Rond extends Figure implements Surfacable {
 		return Math.PI * r * r;
 	}
 
+	@Override
+	public boolean couvre(Point p) {
+		if (p.distance(centre) <= r)
+		{
+			return true;
+		}
+		return false;
+	}
+
 
 }

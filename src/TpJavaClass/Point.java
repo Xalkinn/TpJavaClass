@@ -34,11 +34,17 @@ public class Point {
 		}
 		Point p = (Point) o;
 		if(this.getX() == p.getX() && this.getY() == p.getY()) 
-			//condition de vérification entre les coordonnees du point (grace à this on compare les coordonnees du constructeur Point();) 
-			//et le point qui a pour coordonnee 25, 25
+			/*condition de vérification entre les coordonnees du point
+			 *(grace à this on compare les coordonnees du constructeur Point();) 
+			 *et le point qui a pour coordonnee 25, 25 */
 		{
 			return true;
 		}
 		return false; //Obligatoire pour la fonction equals
 	}
+	
+	public double distance(Point p) {
+		return Math.sqrt((Math.pow(p.getX()-this.getX(), 2))-(Math.pow(p.getY()-this.getY(), 2)));
+	}
+	
 }

@@ -44,4 +44,10 @@ public class Segment extends Figure {
 		return list_point;
 	}
 
+	@Override
+	public boolean couvre(Point p) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
