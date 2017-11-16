@@ -111,6 +111,9 @@ public class FigureUtil {
 		Iterator it = dessin.getListe().iterator();
 		//Création d'itérateur pour parcourir le Dessin qui contient Figure
 		Figure figure = null;
+		/*La boucle tant que en dessous va me permettre de parcourir le dessin.
+		 *Si pas de figure je ressors grace au return figure en dessous de la boucle
+		 */
 		while (it.hasNext()) {
 			//Permet de passer au suivant
 			figure = (Figure) it.next(); 
