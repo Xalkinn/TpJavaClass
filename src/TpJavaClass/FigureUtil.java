@@ -14,9 +14,10 @@ public class FigureUtil {
 	private static final int Y_MIN = 0;
 	private static final int Y_MAX = 99;
 
-	/* Création d'un constructeur private afin d'interdire l'instanciation de cette
+	/*
+	 * Création d'un constructeur private afin d'interdire l'instanciation de cette
 	 * classe.
-	 * */
+	 */
 	private FigureUtil() {
 	}
 
@@ -59,71 +60,65 @@ public class FigureUtil {
 		Segment segment = new Segment(debut, longueur, horizontal);
 		return segment;
 	}
-	
+
 	public static Figure getRandomFigure() {
 		double alea = Math.random();
-		if (alea < 0.25)
-		{
+		if (alea < 0.25) {
 			return getRandomCarre();
 		}
-		if (alea < 0.5)
-		{
+		if (alea < 0.5) {
 			return getRandomRectangle();
 		}
-		if (alea < 0.75)
-		{
+		if (alea < 0.75) {
 			return getRandomRond();
-		}
-		else 
-		{
+		} else {
 			return getRandomSegment();
 		}
 	}
-	
+
 	public static Surfacable getRandomSurfacable() {
 		double alea = Math.random();
-		//Math.random va me créer un chiffre aléatoire entre 0 et 1
-		if (alea < 0.33)
-		{
+		// Math.random va me créer un chiffre aléatoire entre 0 et 1
+		if (alea < 0.33) {
 			return getRandomCarre();
 		}
-		if (alea < 0.66)
-		{
+		if (alea < 0.66) {
 			return getRandomRectangle();
-		}
-		else return getRandomRond();	
-		//Je renvoi 3 chose donc je divise 1 par 3
+		} else
+			return getRandomRond();
+		// Je renvoi 3 chose donc je divise 1 par 3
 	}
-	
-	public static ArrayList<Figure> genere(int nbfigure){
+
+	public static ArrayList<Figure> genere(int nbfigure) {
 		ArrayList<Figure> result = new ArrayList<>();
-		int i = 0 ; //Pour la boucle tant que
-		while (i < nbfigure)
-		{
+		int i = 0; // Pour la boucle tant que
+		while (i < nbfigure) {
 			result.add(getRandomFigure());
 			i++;
 		}
-		
+
 		return result;
 	}
-	
+
 	public static Figure getFigureEn(Point p, Dessin dessin) {
 		Iterator it = dessin.getListe().iterator();
-		//Création d'itérateur pour parcourir le Dessin qui contient Figure
+		// Création d'itérateur pour parcourir le Dessin qui contient Figure
 		Figure figure = null;
-		/*La boucle tant que en dessous va me permettre de parcourir le dessin.
-		 *Si pas de figure je ressors grace au return figure en dessous de la boucle
+		/*
+		 * La boucle tant que en dessous va me permettre de parcourir le dessin. Si pas
+		 * de figure je ressors grace au return figure en dessous de la boucle
 		 */
 		while (it.hasNext()) {
-			//Permet de passer au suivant
-			figure = (Figure) it.next(); 
-			//Cast obligaroire
-			if(figure.couvre(p)) {
-				//Ici si le point fais parti d'une figure je renvoi figure
+			// Permet de passer au suivant
+			figure = (Figure) it.next();
+			// Cast obligaroire
+			if (figure.couvre(p)) {
+				// Ici si le point fais parti d'une figure je renvoi figure
 				return figure;
 			}
 		}
 		return null;
-		//Si il n'y a pas de figure on sors de la boucle en sortant un null precedemment initialiser au dessus
+		// Si il n'y a pas de figure on sors de la boucle en sortant un null
+		// precedemment initialiser au dessus
 	}
 }

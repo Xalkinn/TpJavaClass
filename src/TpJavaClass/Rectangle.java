@@ -81,8 +81,9 @@ public class Rectangle extends Figure implements Surfacable {
 		return supAbsMin && infAbsMax && supOrdMin && infOrdMax;
 
 		/*
-		 * ========================================= 2IEME METHODE
-		 * ==========================================
+		 * ========================================= 
+		 * 					2IEME METHODE
+		 * =========================================
 		 * 
 		 * if(p.getX() >= basGauche.getX() && p.getX() <= basDroit.getX() && p.getY() >=
 		 * basGauche.getY() && p.getY() <= hautGauche.getY() ) { return true; } return

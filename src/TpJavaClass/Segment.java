@@ -46,6 +46,11 @@ public class Segment extends Figure {
 
 	@Override
 	public boolean couvre(Point p) {
+		/*
+		 * Il faut deja voir si le point qui doit etre sur le segment soit sur un
+		 * segment horizontale ou vertical Donc on cree une conditions si le segment est
+		 * horizontale en reutilisant le boolean horizontale cree precedemment
+		 */
 		if (horizontale)
 		// C'est un booléen donc pas besoin de mettre horizontale == true
 		{
