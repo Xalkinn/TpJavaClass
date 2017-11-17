@@ -60,7 +60,8 @@ public class Rond extends Figure implements Surfacable {
 			boolean memeCentre = rond.centre.equals(this.centre);
 			/*
 			 * Pour les primitif ci dessous on ne peux pas utiliser de méthode donc on fais
-			 * une égalité
+			 * une égalité == : primitif 
+			 * .equals : object
 			 */
 			boolean memeRayon = rond.r == this.r;
 			// Si le rayon et le centre sont identique alors c'est vrai
