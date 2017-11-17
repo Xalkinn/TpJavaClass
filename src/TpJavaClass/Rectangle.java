@@ -73,6 +73,7 @@ public class Rectangle extends Figure implements Surfacable {
 
 	@Override
 	public boolean couvre(Point p) {
+		// Création de bolleen afin d'avoir une meilleur lisibilite du code
 		boolean supAbsMin = p.getX() >= basGauche.getX();
 		boolean infAbsMax = p.getX() <= basDroit.getX();
 		boolean supOrdMin = p.getY() >= basGauche.getY();
@@ -81,8 +82,8 @@ public class Rectangle extends Figure implements Surfacable {
 		return supAbsMin && infAbsMax && supOrdMin && infOrdMax;
 
 		/*
-		 * ========================================= 
-		 * 					2IEME METHODE
+		 * =========================================
+		 * 2IEME METHODE
 		 * =========================================
 		 * 
 		 * if(p.getX() >= basGauche.getX() && p.getX() <= basDroit.getX() && p.getY() >=
