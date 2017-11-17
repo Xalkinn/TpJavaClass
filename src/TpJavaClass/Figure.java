@@ -18,4 +18,6 @@ public abstract class Figure {
 	 */
 
 	public abstract boolean couvre(Point p);
+	
+	public abstract Couleur getCouleur();
 }

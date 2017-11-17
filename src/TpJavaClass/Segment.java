@@ -63,4 +63,9 @@ public class Segment extends Figure {
 		return false;
 	}
 
+	@Override
+	public Couleur getCouleur() {
+		return null;
+	}
+
 }

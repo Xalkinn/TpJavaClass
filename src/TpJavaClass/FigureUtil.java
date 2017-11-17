@@ -118,7 +118,9 @@ public class FigureUtil {
 			}
 		}
 		return null;
-		// Si il n'y a pas de figure on sors de la boucle en sortant un null
-		// precedemment initialiser au dessus
+		/*
+		 * Si il n'y a pas de figure on sors de la boucle en sortant un null
+		 * precedemment initialiser au dessus
+		 */
 	}
 }

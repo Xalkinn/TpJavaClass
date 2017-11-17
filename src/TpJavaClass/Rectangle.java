@@ -91,4 +91,9 @@ public class Rectangle extends Figure implements Surfacable {
 		 * false; }
 		 */
 	}
+
+	@Override
+	public Couleur getCouleur() {
+		return null;
+	}
 }

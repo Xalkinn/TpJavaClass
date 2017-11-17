@@ -74,4 +74,9 @@ public class Rond extends Figure implements Surfacable {
 		}
 	}
 
+	@Override
+	public Couleur getCouleur() {
+		return null;
+	}
+
 }
