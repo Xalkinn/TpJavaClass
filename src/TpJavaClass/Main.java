@@ -32,6 +32,11 @@ public class Main {
 
 		System.out.println(Couleur.Bleu);
 		System.out.println(Couleur.getCouleurDefaut());
+		
+		MonThread t1 = new MonThread("1", 15);
+		MonThread t2 = new MonThread("2", 25);
+		t1.start();
+		t2.start();
 
 	}
 }
