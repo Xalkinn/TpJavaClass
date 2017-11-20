@@ -1,5 +1,8 @@
 package TpJavaClass;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -122,5 +125,9 @@ public class FigureUtil {
 		 * Si il n'y a pas de figure on sors de la boucle en sortant un null
 		 * precedemment initialiser au dessus
 		 */
+	}
+	
+	public void imprime(String Dessin) throws IOException {
+		PrintWriter dessin = new PrintWriter(new FileWriter("test.txt"));
 	}
 }
